@@ -2,7 +2,7 @@
   box-sizing:border-box;
   margin:0;
   padding:0;
-  text-transform:uppercase ;
+  text-transform:uppercase;
 }
 
 .container{
@@ -27,7 +27,12 @@
 .box-color{
   height:120px;
   width:160px;
-  border-radius:50% 50% 10% 10%;
+  border-radius:60% 60% 10% 10%;
+  margin: 5px;
+}
+
+.box-reverse{
+  border-radius:10% 10% 60% 60% ;
 }
 
 h1,button{
@@ -38,27 +43,29 @@ h1,button{
 
 button{
   display:inline-block;
-  max-width:150px;
-  padding:6px 12px;
+  max-width:200px;
+  padding:15px 20px;
+  border: none;
   outline:none;
   border-radius:5px;
-  background-color:red;
+  background-color:#34f522;
+  color: white;
   font-size:16px;
+  cursor: pointer;
 }
 
 #red{
-  background-color:red;
+  background-color:#f01811;
 }
 
 #yellow{
-  background-color:yellow;
+  background-color:#f5f522;
 }
 
 #blue{
-  background-color:blue;
-  flex-basis:row reverse column-reverse;
+  background-color:#2245f5;
 }
 
 #green{
-  background-color:green;
+  background-color:#34f522;
 }
