@@ -33,6 +33,7 @@
   width:160px;
   border-radius:60% 60% 10% 10%;
   margin: 5px;
+  opacity: 85%;
 }
 
 .box-reverse{
@@ -68,6 +69,7 @@ button{
   cursor: pointer;
 }
 
+
 #red{
   background-color:#f01811;
 }
@@ -83,3 +85,8 @@ button{
 #green{
   background-color:#34f522;
 }
+
+.full-color{
+  opacity: 100%;
+}
+
