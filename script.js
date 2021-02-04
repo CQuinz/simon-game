@@ -10,17 +10,26 @@ let colorArray =[];
 // const yellow = document.getElementById('yellow');
 // const blue = document.getElementById('blue');
 // const green = document.getElementById('green');
-const colorShapes
+const colorBoxes = document.querySelectorAll('.box-color');
 
 // Button and text elements
 const startBtn = document.getElementById('start');
 const roundNumText = document.getElementById('roundNumText');
 
-// EventListeners for color boxes
 
 
 // Play Function
 
-let playAnimation = (color)=>{
+let playAnimation = (e)=>{
+  let color =e.srcElement;
+  color.classList.add('full-color');
+  setInterval(()=>{
+    color.classList.remove('full-color');
+  }, 250);
+}
 
+
+// EventListeners for color boxes
+for(i=0;i<colorBoxes.length;i++){
+  colorBoxes[i].addEventListener('click',playAnimation);
 }
