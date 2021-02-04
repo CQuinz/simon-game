@@ -22,14 +22,27 @@ const roundNumText = document.getElementById('roundNumText');
 
 let play = (e)=>{
   let color =e.srcElement;
+  // Play animation
   color.classList.add('full-color');
+  // Play sound
+  // let colorID = "'" + color.id + "'";
+  let colorID =  color.id;
+  let sound = new Audio(`sounds/${colorID}.mp3`);
+  sound.play();
+  console.log(colorID);
   setInterval(()=>{
     color.classList.remove('full-color');
-  }, 250);
+  }, 300);
+  
+
 }
 
 
 // EventListeners for color boxes
 for(i=0;i<colorBoxes.length;i++){
+  
   colorBoxes[i].addEventListener('click',play);
+  
+
+
 }
