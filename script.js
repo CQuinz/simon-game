@@ -27,7 +27,8 @@ let play = (e)=>{
   // Play sound
   // let colorID = "'" + color.id + "'";
   let colorID =  color.id;
-  let sound = new Audio(`sounds/${colorID}.mp3`);
+  let sound = new Audio(`${colorID}.mp3`);
+  // let sound = new Audio("blue.mp3");
   sound.play();
   console.log(colorID);
   setInterval(()=>{
