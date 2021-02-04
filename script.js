@@ -20,7 +20,7 @@ const roundNumText = document.getElementById('roundNumText');
 
 // Play Function
 
-let playAnimation = (e)=>{
+let play = (e)=>{
   let color =e.srcElement;
   color.classList.add('full-color');
   setInterval(()=>{
@@ -31,5 +31,5 @@ let playAnimation = (e)=>{
 
 // EventListeners for color boxes
 for(i=0;i<colorBoxes.length;i++){
-  colorBoxes[i].addEventListener('click',playAnimation);
+  colorBoxes[i].addEventListener('click',play);
 }
