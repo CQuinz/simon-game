@@ -43,7 +43,5 @@ let play = (e)=>{
 for(i=0;i<colorBoxes.length;i++){
   
   colorBoxes[i].addEventListener('click',play);
-  
-
-
+ 
 }
