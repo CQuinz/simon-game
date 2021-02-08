@@ -2,20 +2,25 @@
 let newGame = false;
 let sequenceNum;
 let roundNum = 0;
-let colorArray =[];
+let colorSequence = [];
 
 // *******CONSTANTS***********
 // Colorboxes
-// const red = document.getElementById('red');
-// const yellow = document.getElementById('yellow');
-// const blue = document.getElementById('blue');
-// const green = document.getElementById('green');
 const colorBoxes = document.querySelectorAll('.box-color');
+
+// ColorArray that is used with randomNum function to generate random colors
+const colorArray =['red','yellow','blue','green']; 
 
 // Button and text elements
 const startBtn = document.getElementById('start');
 const roundNumText = document.getElementById('roundNumText');
 
+
+// Generate random color
+const randomColor = ()=>{
+  let color = Math.floor(Math.random()*4);
+  console.log(colorArray[color]);
+}
 
 
 // Play Function
