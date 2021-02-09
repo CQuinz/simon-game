@@ -18,20 +18,25 @@ const roundNumText = document.getElementById('roundNumText');
 
 // Generate random color
 const randomColor = ()=>{
-  let color = Math.floor(Math.random()*4);
-  return(colorArray[color]);
+  let colorNum = Math.floor(Math.random()*4);
+  
+  return(colorArray[colorNum]);
 }
 
-const animatePlayColor = (color)=>{
+const animatePlayColor = (selectedColor)=>{
   // Play animation
-  color.classList.add('full-color');
+  // Get element by id
+  let colorID = document.getElementById(`${selectedColor}`);
+
+  colorID.classList.add('full-color');
+  // console.log(color);
   // Play sound
-  let sound = new Audio(`${color.id}.mp3`);
+  let sound = new Audio(`${selectedColor}.mp3`);
   sound.play();
 
   // Remove 'full-color' class from div after 0.3 seconds
   setInterval(()=>{
-    color.classList.remove('full-color');
+    colorID.classList.remove('full-color');
   }, 300);
 }
 
@@ -39,16 +44,24 @@ const animatePlayColor = (color)=>{
 let getPlayerSelectedColor = (e)=>{
   let color =e.srcElement;
  
-  // let colorID =  color.id;
-  // console.log(colorID);
-
-  animatePlayColor(color);
+  // console.log(color.id);
+  animatePlayColor(color.id);
   
 }
 
 // EventListeners for color boxes
-for(i=0;i<colorBoxes.length;i++){
-  
+for(i=0;i<colorBoxes.length;i++){ 
   colorBoxes[i].addEventListener('click',getPlayerSelectedColor);
- 
+}
+
+// PLAY GAME FUNCTION
+const playGame = ()=>{
+  newGame = true;
+
+  while (newGame ===true) {
+    
+    animatePlayColor(randomColor());
+    newGame = false;
+
+  }
 }
