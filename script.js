@@ -59,8 +59,10 @@ const playGame = ()=>{
   newGame = true;
 
   while (newGame ===true) {
-    
-    animatePlayColor(randomColor());
+    let newColor = randomColor();
+    colorSequence.push(newColor);
+    animatePlayColor(newColor);
+    console.log(colorSequence);
     console.log(roundNum++);
     newGame = false;
 
