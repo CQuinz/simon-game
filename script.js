@@ -68,3 +68,5 @@ const playGame = ()=>{
 
   }
 }
+
+startBtn.addEventListener('click', playGame);

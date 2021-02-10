@@ -70,6 +70,14 @@ button{
   cursor: pointer;
 }
 
+button:hover{
+  background-color:#2acc1bd0 ;
+}
+
+button:active{
+  transform: translateY(4px);
+}
+
 
 #red{
   background-color:#f01811;
