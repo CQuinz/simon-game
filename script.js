@@ -37,7 +37,7 @@ const animatePlayColor = (selectedColor)=>{
   // Remove 'full-color' class from div after 0.3 seconds
   setInterval(()=>{
     colorID.classList.remove('full-color');
-  }, 300);
+  }, 400);
 }
 
 // Get player selected color function
@@ -61,6 +61,7 @@ const playGame = ()=>{
   while (newGame ===true) {
     
     animatePlayColor(randomColor());
+    console.log(roundNum++);
     newGame = false;
 
   }
