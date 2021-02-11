@@ -42,16 +42,17 @@ const animatePlayColor = (selectedColor)=>{
 
 // Get player selected color function
 let getPlayerSelectedColor = (e)=>{
-  let color =e.srcElement;
-  console.log(color.id);
+  let playerColor =e.srcElement;
+  console.log(playerColor.id);
  
- return animatePlayColor(color.id);
+ return animatePlayColor(playerColor.id);
   
 }
 
 // EventListeners for color boxes
 for(i=0;i<colorBoxes.length;i++){ 
   colorBoxes[i].addEventListener('click',getPlayerSelectedColor);
+  // Put inside PlayGame function?
 }
 
 // PLAY GAME FUNCTION
