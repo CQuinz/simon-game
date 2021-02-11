@@ -43,9 +43,9 @@ const animatePlayColor = (selectedColor)=>{
 // Get player selected color function
 let getPlayerSelectedColor = (e)=>{
   let color =e.srcElement;
+  console.log(color.id);
  
-  // console.log(color.id);
-  animatePlayColor(color.id);
+ return animatePlayColor(color.id);
   
 }
 
@@ -62,10 +62,10 @@ const playGame = ()=>{
     let newColor = randomColor();
     colorSequence.push(newColor);
     animatePlayColor(newColor);
-    console.log(colorSequence);
-    console.log(roundNum++);
-    newGame = false;
 
+    console.log("ColorSequence: " + colorSequence);
+    console.log('RoundNum: ' + roundNum++);
+    newGame = false;
   }
 }
 
