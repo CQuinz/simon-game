@@ -55,35 +55,26 @@ for(i=0;i<colorBoxes.length;i++){
   // Put inside PlayGame function?
 }
 
+let colorsPlayed =0;
 // PLAY GAME FUNCTION
 const playGame = ()=>{
-  newGame = true;
+  // newGame = true;
 
-  while (newGame ===true) {
+  // while (newGame ===true) {
     let newColor = randomColor();
     colorSequence.push(newColor);
-    let sequenceLength = colorSequence.length;
-    let colorsPlayed =0;
-
-    // colorSequence.forEach((color) =>{
-
-    //   if(colorsPlayed ===sequenceLength){
-    //     newGame = false;
-    //   }else{
-    //   setInterval(()=>{
-    //     animatePlayColor(color);
-    //     colorsPlayed++;
-    //     }, 2000);
-    //   });
-    // }
-    // animatePlayColor(newColor);
-
-    console.log("ColorSequence: " + colorSequence);
-    console.log('RoundNum: ' + roundNum++);
-
-    // Logic for Player interaction
+    colorsPlayed++;
     
-  }
+    if(colorsPlayed ===colorSequence.length){
+      roundNum++;
+    }
+     console.log("ColorSequence: " + colorSequence);
+    console.log('RoundNum: ' + roundNum);
+    console.log('ColorsPlayed: ' + colorsPlayed);
+    
+
+    
+  // }
   
 }
 
