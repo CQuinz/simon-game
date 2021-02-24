@@ -62,12 +62,45 @@ const playGame = ()=>{
   while (newGame ===true) {
     let newColor = randomColor();
     colorSequence.push(newColor);
-    animatePlayColor(newColor);
+    let sequenceLength = colorSequence.length;
+    let colorsPlayed =0;
+
+    // colorSequence.forEach((color) =>{
+
+    //   if(colorsPlayed ===sequenceLength){
+    //     newGame = false;
+    //   }else{
+    //   setInterval(()=>{
+    //     animatePlayColor(color);
+    //     colorsPlayed++;
+    //     }, 2000);
+    //   });
+    // }
+    // animatePlayColor(newColor);
 
     console.log("ColorSequence: " + colorSequence);
     console.log('RoundNum: ' + roundNum++);
-    newGame = false;
+
+    // Logic for Player interaction
+    
   }
+  
 }
 
 startBtn.addEventListener('click', playGame);
+
+let arrayColor =['green', 'blue', 'red', 'yellow', 'blue', 'red'];
+let playArray = ()=>{
+
+  // Swiped code from stackover flow: https://stackoverflow.com/questions/46354221/javascript-how-to-loop-through-every-arrays-item-every-second/46354256
+  // ************************************
+  let index = 0;
+  let interval = setInterval(function(){
+    animatePlayColor(arrayColor[index++]);
+     if(index == arrayColor.length){
+        clearInterval(interval);
+     }
+    //***************************************
+
+    }, 2000);
+}
